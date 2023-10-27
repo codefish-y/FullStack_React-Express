@@ -3,8 +3,9 @@ const router = express.Router();
 const { Posts } = require("../models");
 
 //      get路由实现
-router.get("/", (req, res) => {
-  res.json("Hello World!");
+router.get("/", async (req, res) => {
+  const listAllPost = await Posts.findAll();
+  res.json(listAllPost);
 });
 //      post路由实现
 router.post("/", async (req, res) => {
