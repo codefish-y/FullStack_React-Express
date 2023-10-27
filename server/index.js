@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+//解析json数据
+app.use(express.json());
+
 // 导入数据库支持驱动sequelize
 const db = require('./models')
 //Post路由
