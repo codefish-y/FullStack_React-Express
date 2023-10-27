@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 //解析json数据
 app.use(express.json());
+//add cors support
+app.use(cors());
 
 // 导入数据库支持驱动sequelize
 const db = require('./models')

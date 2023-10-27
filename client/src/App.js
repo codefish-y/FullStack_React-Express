@@ -4,7 +4,9 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(()=>{
-    axios.get("")
+    axios.get("http://localhost:3001/posts").then((response) =>{
+        console.log(response);
+    })
   },[])  
   return <div className="App"></div>;
 }
