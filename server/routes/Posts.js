@@ -4,6 +4,7 @@ const { Posts } = require("../models");
 
 //      get路由实现
 router.get("/", async (req, res) => {
+//  从Post数据表中查询数据
   const listAllPost = await Posts.findAll();
   res.json(listAllPost);
 });
